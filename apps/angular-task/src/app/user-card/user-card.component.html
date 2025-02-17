@@ -1,0 +1,9 @@
+<div *ngIf="user" class="card m-2" (click)="onCardClicked()">
+    <h5>{{user.name}}</h5>
+    <h5>&#64;<i>{{user.username}}</i></h5>
+    <!-- <h6>{{user.email}}</h6> -->
+    <p>{{user.email}}</p>
+    <div class="favorite-container">
+        <crx-favorite-button [checked]="isFavorite" (checkChanged)="saveToggled($event)"></crx-favorite-button>
+    </div>
+  </div>

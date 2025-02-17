@@ -1,0 +1,17 @@
+<button 
+    *ngIf="!checked"
+    type="button" 
+    title="Save to favorites" 
+    class="btn btn-link text-decoration-none save" 
+    (click)="toggle($event, true)"
+>
+<i class="icon-heart"></i>
+</button>
+<button 
+    *ngIf="checked" 
+    type="button" 
+    title="Remove from favorites" 
+    class="btn btn-link text-decoration-none unsave" 
+    (click)="toggle($event, false)">
+<i class="icon-heart"></i>
+</button>

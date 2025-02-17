@@ -1,0 +1,15 @@
+<div class="container users-list mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="search-container">
+                <crx-input-field iconClass="icon-search" placeholder="Filter by text" (valueChange)="setFilter($event)"></crx-input-field>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let user of (filteredUsersSub$ | async)" class="col-md-4">
+            <crx-user-card [user]="user" (cardClicked)="onCardClick(user.id)"></crx-user-card>
+        </div>
+    </div>
+</div>
